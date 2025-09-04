@@ -19,7 +19,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Microsoft.ML" Version="4.0.2" />
+        <None Include="../../docfx/docs/introduction.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Microsoft.ML.DataView" Version="4.0.2" />
     </ItemGroup>
 
 </Project>
