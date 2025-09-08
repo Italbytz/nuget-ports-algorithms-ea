@@ -23,16 +23,9 @@ public interface IFitnessFunction
     public int NumberOfObjectives { get; }
 
     /// <summary>
-    ///     Gets or sets the name of the column in the data containing the target
-    ///     values (labels).
-    /// </summary>
-    public string LabelColumnName { get; set; }
-
-    /// <summary>
     ///     Evaluates the fitness of an individual against the provided data.
     /// </summary>
     /// <param name="individual">The individual to evaluate.</param>
-    /// <param name="data">The data to evaluate the individual against.</param>
     /// <returns>
     ///     An array of fitness values, with one value per objective.
     ///     Higher values typically indicate better performance.

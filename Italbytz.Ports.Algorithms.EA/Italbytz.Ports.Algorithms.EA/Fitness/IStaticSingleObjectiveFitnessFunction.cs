@@ -9,8 +9,7 @@
 namespace Italbytz.EA.Fitness;
 
 /// <summary>
-///     Represents a static, single-objective fitness function for genetic
-///     programming.
+///     Represents a static, single-objective fitness function.
 /// </summary>
 /// <remarks>
 ///     A static single-objective fitness function evaluates the fitness of an
