@@ -30,5 +30,5 @@ public interface IFitnessFunction
     ///     An array of fitness values, with one value per objective.
     ///     Higher values typically indicate better performance.
     /// </returns>
-    public double[] Evaluate(IIndividual individual, IDataView data);
+    public double[] Evaluate(IIndividual individual);
 }
