@@ -20,6 +20,7 @@ namespace Italbytz.EA.Individuals;
 /// </remarks>
 public interface IIndividualList : IEnumerable<IIndividual>
 {
+    public int Count { get; }
     IIndividual this[int index] { get; }
     void Add(IIndividual individual);
     IIndividual GetRandomIndividual();
