@@ -24,6 +24,10 @@ public interface IIndividualList : IEnumerable<IIndividual>
     IIndividual this[int index] { get; }
     void Add(IIndividual individual);
     IIndividual GetRandomIndividual();
+    
+    void AddRange(IEnumerable<IIndividual> individuals);
+    
+    void Add(IIndividualList individuals);
 
     List<IIndividual> ToList();
 }
