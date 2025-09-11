@@ -23,6 +23,13 @@ public interface IIndividualList : IEnumerable<IIndividual>
     public int Count { get; }
     IIndividual this[int index] { get; }
     void Add(IIndividual individual);
+    
+    void RemoveAt(int index);
+    
+    void Clear();
+    
+    bool Remove(IIndividual individual);
+    
     IIndividual GetRandomIndividual();
     
     void AddRange(IEnumerable<IIndividual> individuals);
