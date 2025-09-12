@@ -18,6 +18,9 @@ public interface IMonomial<TCategory> : ICloneable
 {
     List<ILiteral<TCategory>> Literals { get; set; }
     float[] Weights { get; set; }
+    
+    public double[] Evaluate(TCategory[] input);
+    
     public float[][] Predictions { get; set; }
     int Size { get; }
     void RandomizeWeights(bool restricted);

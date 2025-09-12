@@ -14,6 +14,8 @@ namespace Italbytz.EA.SearchSpace;
 /// </remarks>
 public interface ILiteral<TCategory> : IComparable<ILiteral<TCategory>>
 {
+    public bool Evaluate(TCategory[] input);
+    
     /// <summary>
     ///     Gets or sets the array of boolean predictions made by this literal.
     /// </summary>
