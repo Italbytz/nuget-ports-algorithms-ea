@@ -10,6 +10,8 @@ namespace Italbytz.EA.SearchSpace;
 /// <typeparam name="TCategory">The category type used in the polynomial.</typeparam>
 public interface IPolynomial<TCategory> : ICloneable
 {
+    float[] Weights { get; set; }
+    
     /// <summary>
     ///     Gets or sets the list of monomials that constitute this polynomial.
     /// </summary>
