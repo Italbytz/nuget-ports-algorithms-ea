@@ -20,6 +20,8 @@ public interface IMonomial<TCategory> : ICloneable
     float[] Weights { get; set; }
     
     public float[] Evaluate(TCategory[] input);
+
+    public bool EvaluateLiterals(TCategory[] input);
     
     public float[][] Predictions { get; set; }
     int Size { get; }
