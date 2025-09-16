@@ -6,6 +6,7 @@
 // Michael Leifhelm, Kai Plociennik, Heiko Roeglin, Andrea Schweer, 
 // Dirk Sudholt, Stefan Tannenbaum, Ingo Wegener
 
+using System;
 using System.Threading.Tasks;
 using Italbytz.EA.Fitness;
 using Italbytz.EA.Individuals;
@@ -15,7 +16,7 @@ namespace Italbytz.EA;
 /// <summary>
 ///     An operator that processes indiviuals.
 /// </summary>
-public interface IOperator
+public interface IOperator:ICloneable
 {
     /// <summary>
     ///     Computes the output of the operator from the input.
