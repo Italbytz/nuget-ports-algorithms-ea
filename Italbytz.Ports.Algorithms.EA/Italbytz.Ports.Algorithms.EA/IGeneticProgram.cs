@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using Italbytz.EA.Crossover;
 using Italbytz.EA.Fitness;
 using Italbytz.EA.Individuals;
@@ -27,12 +28,12 @@ public interface IGeneticProgram
     /// <summary>
     ///     Gets or sets the list of mutation operators used in the genetic program.
     /// </summary>
-    public List<IMutation> Mutations { get; set; }
+    public List<IGraphOperator> Mutations { get; set; }
 
     /// <summary>
     ///     Gets or sets the list of crossover operators used in the genetic program.
     /// </summary>
-    public List<ICrossover> Crossovers { get; set; }
+    public List<IGraphOperator> Crossovers { get; set; }
 
     /// <summary>
     ///     Gets the current population of individuals.
@@ -61,13 +62,13 @@ public interface IGeneticProgram
     ///     Gets or sets the selection strategy used to choose individuals for genetic
     ///     operations.
     /// </summary>
-    public ISelection SelectionForOperator { get; set; }
+    public IGraphOperator SelectionForOperator { get; set; }
 
     /// <summary>
     ///     Gets or sets the selection strategy used to determine which individuals
     ///     survive to the next generation.
     /// </summary>
-    public ISelection SelectionForSurvival { get; set; }
+    public IGraphOperator SelectionForSurvival { get; set; }
 
     /// <summary>
     ///     Gets or sets the criteria used to determine when to stop the evolutionary
@@ -95,5 +96,5 @@ public interface IGeneticProgram
     ///     Runs the genetic program until one of the stopping criteria is met.
     /// </summary>
     /// <returns>The final population of individuals after evolution completes.</returns>
-    public IIndividualList Run();
+    public Task<IIndividualList> Run();
 }
