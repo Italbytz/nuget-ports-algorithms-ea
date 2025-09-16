@@ -37,4 +37,6 @@ public interface IIndividualList : IEnumerable<IIndividual>
     void Add(IIndividualList individuals);
 
     List<IIndividual> ToList();
+    
+    public void Freeze();
 }
