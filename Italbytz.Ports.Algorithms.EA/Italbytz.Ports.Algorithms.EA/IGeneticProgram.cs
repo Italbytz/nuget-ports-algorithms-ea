@@ -35,11 +35,6 @@ public interface IGeneticProgram
     public List<ICrossover> Crossovers { get; set; }
 
     /// <summary>
-    ///     Gets or sets the training data used for evaluating individuals.
-    /// </summary>
-    public IDataView TrainingData { get; set; }
-
-    /// <summary>
     ///     Gets the current population of individuals.
     /// </summary>
     public IIndividualList Population { get; }
