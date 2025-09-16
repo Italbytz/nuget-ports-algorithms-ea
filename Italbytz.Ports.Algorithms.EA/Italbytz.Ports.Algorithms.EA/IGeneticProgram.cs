@@ -87,12 +87,6 @@ public interface IGeneticProgram
     IFitnessFunction FitnessFunction { get; set; }
 
     /// <summary>
-    ///     Initializes the population according to the specified initialization
-    ///     strategy.
-    /// </summary>
-    public void InitPopulation();
-
-    /// <summary>
     ///     Runs the genetic program until one of the stopping criteria is met.
     /// </summary>
     /// <returns>The final population of individuals after evolution completes.</returns>

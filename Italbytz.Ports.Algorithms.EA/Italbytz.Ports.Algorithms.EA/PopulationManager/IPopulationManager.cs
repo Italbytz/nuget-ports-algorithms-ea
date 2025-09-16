@@ -24,4 +24,6 @@ public interface IPopulationManager
 {
     public IIndividualList Population { get; set; }
     public void InitPopulation(IInitialization initialization);
+    
+    public void Freeze();
 }
