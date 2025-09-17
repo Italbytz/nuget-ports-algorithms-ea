@@ -23,8 +23,6 @@ public interface IMonomial<TCategory> : ICloneable
 
     public bool EvaluateLiterals(TCategory[] input);
     
-    public float[][] Predictions { get; set; }
     int Size { get; }
-    void RandomizeWeights(bool restricted);
-    void UpdatePredictions();
+    
 }
