@@ -7,6 +7,7 @@
 // Dirk Sudholt, Stefan Tannenbaum, Ingo Wegener
 
 using System;
+using Italbytz.EA.Fitness;
 
 namespace Italbytz.EA.Individuals;
 
@@ -29,7 +30,7 @@ public interface IIndividual : ICloneable
     ///     Gets or sets the latest known fitness value(s) of this individual.
     ///     For multi-objective optimization, this can contain multiple fitness values.
     /// </summary>
-    public double[]? LatestKnownFitness { get; set; }
+    public IFitnessValue? LatestKnownFitness { get; set; }
 
     /// <summary>
     ///     Gets the size of the individual representation. This could represent

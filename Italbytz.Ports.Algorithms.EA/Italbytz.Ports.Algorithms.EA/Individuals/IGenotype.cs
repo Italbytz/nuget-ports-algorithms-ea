@@ -7,6 +7,7 @@
 // Dirk Sudholt, Stefan Tannenbaum, Ingo Wegener
 
 using System;
+using Italbytz.EA.Fitness;
 
 namespace Italbytz.EA.Individuals;
 
@@ -24,7 +25,7 @@ public interface IGenotype : ICloneable
     ///     Gets or sets the latest known fitness values of this genotype.
     /// </summary>
     /// <value>An array of fitness values, or null if fitness has not been evaluated.</value>
-    double[]? LatestKnownFitness { get; set; }
+    IFitnessValue? LatestKnownFitness { get; set; }
 
     /// <summary>
     ///     Gets the size of this genotype.

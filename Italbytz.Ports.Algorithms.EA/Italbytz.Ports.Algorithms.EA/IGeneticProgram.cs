@@ -1,15 +1,11 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using Italbytz.EA.Crossover;
 using Italbytz.EA.Fitness;
 using Italbytz.EA.Individuals;
 using Italbytz.EA.Initialization;
-using Italbytz.EA.Mutation;
 using Italbytz.EA.PopulationManager;
 using Italbytz.EA.SearchSpace;
-using Italbytz.EA.Selection;
 using Italbytz.EA.StoppingCriterion;
-using Microsoft.ML;
 
 namespace Italbytz.EA;
 
