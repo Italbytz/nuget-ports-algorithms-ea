@@ -17,6 +17,11 @@ public interface IPolynomial<TCategory> : ICloneable
     /// </summary>
     public List<IMonomial<TCategory>> Monomials { get; set; }
 
+    /// <summary>
+    ///     Evaluates the polynomial for a given input of categorical data.
+    /// </summary>
+    /// <param name="input">The input categorical data.</param>
+    /// <returns>An array of float values representing the polynomial's output.</returns>
     public float[] Evaluate(TCategory[] input);
     
     /// <summary>

@@ -20,5 +20,11 @@ namespace Italbytz.EA.StoppingCriterion;
 /// </remarks>
 public interface IStoppingCriterion
 {
+    /// <summary>
+    ///     Checks if the stopping criterion has been met.
+    /// </summary>
+    /// <returns>
+    ///     True if the stopping criterion is satisfied, otherwise false.
+    /// </returns>
     public bool IsMet();
 }

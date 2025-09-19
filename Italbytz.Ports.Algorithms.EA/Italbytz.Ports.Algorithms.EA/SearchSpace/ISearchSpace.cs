@@ -18,8 +18,17 @@ namespace Italbytz.EA.SearchSpace;
 ///     populations
 ///     for genetic programming algorithms.
 /// </remarks>
-public interface ISearchSpace
-{
-    IGenotype GetRandomGenotype();
-    IIndividualList GetAStartingPopulation();
-}
+    public interface ISearchSpace
+    {
+        /// <summary>
+        /// Creates a random genotype within this search space.
+        /// </summary>
+        /// <returns>A randomly generated genotype.</returns>
+        IGenotype GetRandomGenotype();
+        
+        /// <summary>
+        /// Generates an initial population for starting the evolutionary algorithm.
+        /// </summary>
+        /// <returns>A list of individuals representing the starting population.</returns>
+        IIndividualList GetAStartingPopulation();
+    }
