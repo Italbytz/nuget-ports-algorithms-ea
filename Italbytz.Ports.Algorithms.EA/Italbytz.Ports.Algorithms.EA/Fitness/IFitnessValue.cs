@@ -17,4 +17,15 @@ public interface IFitnessValue : IComparable<IFitnessValue>, ICloneable
     /// <param name="otherFitnessValue">The other fitness value to compare with.</param>
     /// <returns>True if this fitness value dominates the other fitness value, false otherwise.</returns>
     bool IsDominating(IFitnessValue otherFitnessValue);
+    
+    /// <summary>
+        /// Gets the consolidated value of this fitness.
+        /// </summary>
+        /// <remarks>
+        /// This property provides a single numerical representation of the fitness,
+        /// which is particularly useful for comparing different solutions,
+        /// especially in multi-objective optimization problems where multiple fitness criteria
+        /// need to be combined into a single value.
+        /// </remarks>
+        double ConsolidatedValue { get; }
 }
