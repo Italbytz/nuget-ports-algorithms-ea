@@ -6,6 +6,8 @@
 // Michael Leifhelm, Kai Plociennik, Heiko Roeglin, Andrea Schweer, 
 // Dirk Sudholt, Stefan Tannenbaum, Ingo Wegener
 
+using Italbytz.EA.SearchSpace;
+
 namespace Italbytz.EA.Initialization;
 
 /// <summary>
@@ -21,4 +23,9 @@ namespace Italbytz.EA.Initialization;
 /// </remarks>
 public interface IInitialization : IOperator
 {
+    
+    /// <summary>
+    /// Search space associated with the initialization process.
+    /// </summary>
+    ISearchSpace SearchSpace { get; set; }
 }
