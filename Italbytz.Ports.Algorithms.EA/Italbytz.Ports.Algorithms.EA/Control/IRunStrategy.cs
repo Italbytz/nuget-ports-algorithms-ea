@@ -19,9 +19,9 @@ public interface IRunStrategy
     /// <param name="labelMapping">
     ///     A dictionary mapping label values to their corresponding indices.
     /// </param>
-    /// <returns>The best individual found during the run.</returns>
+    /// <returns>The best individual found during the run and the candidates it was chosen from.</returns>
     public
-    IIndividual Run(IDataView input,
+    (IIndividual,IIndividualList) Run(IDataView input,
         Dictionary<float, int>[] featureValueMappings,
         Dictionary<uint, int> labelMapping);
 }
