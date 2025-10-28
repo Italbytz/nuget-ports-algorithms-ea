@@ -7,7 +7,6 @@
 // Dirk Sudholt, Stefan Tannenbaum, Ingo Wegener
 
 using System;
-using System.IO;
 using Italbytz.EA.Fitness;
 
 namespace Italbytz.EA.Individuals;
@@ -59,11 +58,4 @@ public interface IIndividual : ICloneable
     ///     false.
     /// </returns>
     bool IsDominating(IIndividual otherIndividual);
-
-    /// <summary>
-    ///     Serializes the individual to the provided stream. Implementations should
-    ///     write sufficient data to reconstruct the genotype information.
-    /// </summary>
-    /// <param name="stream">The target stream to which the individual is saved.</param>
-    void Save(Stream stream);
 }
