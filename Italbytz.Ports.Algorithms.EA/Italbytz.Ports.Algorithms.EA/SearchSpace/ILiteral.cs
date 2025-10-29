@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Italbytz.EA.SearchSpace;
 
@@ -14,14 +13,15 @@ namespace Italbytz.EA.SearchSpace;
 /// </remarks>
 public interface ILiteral<TCategory> : IComparable<ILiteral<TCategory>>
 {
-    public bool Evaluate(TCategory[] input);
-    
     /// <summary>
-    ///     Gets or sets the label or name that identifies this literal.
+    ///     Evaluates the literal against the provided categorical input.
+    ///     Returns true if the literal's condition holds for the given input;
+    ///     otherwise false.
     /// </summary>
-    /// <value>
-    ///     A string that represents the literal's label.
-    /// </value>
-    public string Label { get; set; }
-
+    /// <param name="input">
+    ///     An array of categorical values representing the input
+    ///     instance.
+    /// </param>
+    /// <returns>True if the literal matches the input; otherwise false.</returns>
+    public bool Evaluate(TCategory[] input);
 }
