@@ -6,14 +6,6 @@ namespace Italbytz.EA.SearchSpace;
 public interface ISetLiteral<TCategory> : ILiteral<TCategory>
 {
     /// <summary>
-    ///     Gets or sets the label or name that identifies this literal.
-    /// </summary>
-    /// <value>
-    ///     A string that represents the literal's label.
-    /// </value>
-    public string Label { get; }
-
-    /// <summary>
     ///     Gets the list of categories contained in this set literal.
     /// </summary>
     /// <value>A list of categories of type <see cref="TCategory" />.</value>

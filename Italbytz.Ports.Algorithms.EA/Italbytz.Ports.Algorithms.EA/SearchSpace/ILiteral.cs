@@ -14,6 +14,14 @@ namespace Italbytz.EA.SearchSpace;
 public interface ILiteral<TCategory> : IComparable<ILiteral<TCategory>>
 {
     /// <summary>
+    ///     Gets or sets the label or name that identifies this literal.
+    /// </summary>
+    /// <value>
+    ///     A string that represents the literal's label.
+    /// </value>
+    public string Label { get; }
+
+    /// <summary>
     ///     Evaluates the literal against the provided categorical input.
     ///     Returns true if the literal's condition holds for the given input;
     ///     otherwise false.
